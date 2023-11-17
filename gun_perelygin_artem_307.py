@@ -226,7 +226,7 @@ balls = []
 clock = pygame.time.Clock()
 gun = Gun(screen,x=40,side=1)
 gun2 = Gun(screen,x=1100,side=-1)
-trg = [Target(screen) for i in range(0,100000)] #создание элементов
+trg = [Target(screen) for i in range(0,1000)] #создание элементов
 target_1 = Target(screen)
 target_2 = Target(screen)
 finished = False
@@ -246,8 +246,8 @@ while not finished:
     if keys[119]: gun.drive('up') # W
     elif keys[115]: gun.drive('down') # S
 
-    if keys[1073741906]: gun2.drive('up') # R
-    elif keys[1073741905]: gun2.drive('down') # v
+    if keys[114]: gun2.drive('up') # R
+    elif keys[118]: gun2.drive('down') # v
 
     clock.tick(FPS)
     for event in pygame.event.get():
